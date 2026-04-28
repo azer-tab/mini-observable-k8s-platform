@@ -1,2 +1,2 @@
 # mini-observable-k8s-platform
-This project demonstrates a production-oriented DevOps workflow for a small containerized backend service.
+This project demonstrates a production-oriented DevOps workflow for a small containerized backend service. It includes Docker packaging, Kubernetes deployment manifests, CI/CD with GitHub Actions, integration testing, monitoring with Prometheus and Grafana, alerting rules, incident-reporting documentation, and infrastructure automation scripts. The goal is to show practical infrastructure engineering around reliability, observability, and maintainable deployment workflows.
