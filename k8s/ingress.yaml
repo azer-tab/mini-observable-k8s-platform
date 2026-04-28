@@ -1,0 +1,22 @@
+# Requires an Ingress controller (e.g. nginx) to be installed.
+# For kind: https://kind.sigs.k8s.io/docs/user/ingress/
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: api-ingress
+  namespace: platform
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: api.local          # Add to /etc/hosts: 127.0.0.1 api.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: api
+                port:
+                  number: 80
